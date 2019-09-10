@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SportsEquipments.FreeWeights.Hantel">
+    <Position X="2" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FreeWeights\Hantel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsEquipments.Cargo">
+    <Position X="5.25" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cargo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsEquipments.FreeWeights.FreeWeight">
+    <Position X="1.5" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAgAAAAAAAAAAAAARAAAAAAAAAAA=</HashCode>
+      <FileName>FreeWeights\FreeWeight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsEquipments.SportEquipment">
+    <Position X="6.75" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SportEquipment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsEquipments.Fixator">
+    <Position X="9.25" Y="3" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="SportsEquipments.Fixator.FixatorType">
+        <TypeIdentifier>
+          <NewMemberFileName>Fixator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fixator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportsEquipments.Handle">
+    <Position X="12.25" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAgA=</HashCode>
+      <FileName>Handle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

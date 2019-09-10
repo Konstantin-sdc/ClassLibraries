@@ -1,0 +1,923 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Foundations</name>
+    </assembly>
+    <members>
+        <member name="T:Foundations.BasicComplex">
+            <summary>
+            Представляет базовый набор данных для всех производных классов.
+            <para/>
+            <list type="number">
+            <listheader>
+            <term>Состоит из следующих данных:</term>
+            </listheader>
+            <para/>
+            <item>
+            <term><see cref="P:Foundations.BasicComplex.Title"/></term>
+            <description> — Наименование</description>
+            </item>
+            <para/>
+            <item>
+            <term><see cref="P:Foundations.BasicComplex.Description"/></term>
+            <description> — Описание</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="F:Foundations.BasicComplex._title">
+            <summary>Служебное поле для <see cref="P:Foundations.BasicComplex.Title"/></summary>
+        </member>
+        <member name="F:Foundations.BasicComplex._description">
+            <summary>Служебное поле для <see cref="P:Foundations.BasicComplex.Description"/></summary>
+        </member>
+        <member name="M:Foundations.BasicComplex.ArgumentExceptionMessage(System.String)">
+            <summary>Общая часть сообщений для <see cref="T:System.ArgumentException"/></summary>
+            <param name="callerName">Метод, вызвавший исключение</param>
+            <returns>Строка сообщения</returns>
+        </member>
+        <member name="P:Foundations.BasicComplex.InvalidStringDescripttion">
+            <summary>Описание ошибки неверного состава строки</summary>
+            <remarks>Доступно для переопределения.</remarks>
+        </member>
+        <member name="M:Foundations.BasicComplex.StringValidation(System.String,System.String)">
+            <summary>Проверяет строку на корректность, генерирует исключение, если строка некорректна.</summary>
+            <remarks>Доступно для переопределения.</remarks>
+            <param name="checkString">Строка для проверки</param>
+            <param name="callerName">Имя вызывающего метода</param>
+            <exception cref="T:System.ArgumentException">Генерируется, если строка некорректна</exception>
+        </member>
+        <member name="P:Foundations.BasicComplex.Title">
+            <summary>Наименование</summary>
+            <remarks>Доступно для переопределения.</remarks>
+        </member>
+        <member name="P:Foundations.BasicComplex.Description">
+            <summary>Описание.</summary>
+        </member>
+        <member name="P:Foundations.BasicComplex.StringComparison">
+            <summary>Правило проверки строк на <see cref="M:System.String.Equals(System.String,System.StringComparison)"/>.</summary>
+        </member>
+        <member name="P:Foundations.BasicComplex.StringComparisonDefault">
+            <summary>Правило проверки строк на эквивалентность по умолчанию</summary>
+        </member>
+        <member name="M:Foundations.BasicComplex.#ctor">
+            <summary>Создаёт пустой экземпляр <see cref="T:Foundations.BasicComplex"/></summary>
+        </member>
+        <member name="M:Foundations.BasicComplex.#ctor(System.String)">
+            <summary>Создаёт экземпляр с определённым наименованием</summary>
+            <param name="title">Имя</param>
+        </member>
+        <member name="M:Foundations.BasicComplex.#ctor(System.String,System.String)">
+            <summary>Создаёт экземпляр с определёнными наименованием и описанием</summary>
+            <param name="title"></param>
+            <param name="description"></param>
+        </member>
+        <member name="M:Foundations.BasicComplex.IsSameType(System.Object)">
+            <summary>
+            Возвращает результат проверки совпадения типа экземпляра <see cref="T:System.Object"/> 
+            с типом текущего экземпляра.
+            </summary>
+            <param name="obj">Сравниваемый экземпляр <see cref="T:System.Object"/></param>
+            <returns>TRUE, если типы совпадают.</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.Equals(System.Object)">
+            <summary>Возвращает результат проверки эквивалентности текущего экземпляра <see cref="T:Foundations.BasicComplex"/> с другим объектом.</summary>
+            <param name="obj"><see cref="T:System.Object"/> для сравнения</param>
+            <returns>True, если результат положителен.</returns>
+            <returns>False, если результат отрицателен.</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.Equals(Foundations.BasicComplex)">
+            <summary>Возвращает результат проверки эквивалентности текущего экземпляра <see cref="T:Foundations.BasicComplex"/> с другим экземпляром</summary>
+            <param name="other">Экземпляр для сравнения</param>
+            <returns>True, если результат положителен.</returns>
+            <returns>False, если результат отрицателен.</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.Equals(Foundations.BasicComplex,Foundations.BasicComplex)">
+            <summary>Определяет, эквивалентны ли два указанных экземпляра <see cref="T:Foundations.BasicComplex"/>.</summary>
+            <param name="x">Первый сравниваемый объект</param>
+            <param name="y">Второй сравниваемый объект</param>
+            <returns>True, если указанные объекты равны</returns>
+            <returns>False, если указанные объекты неравны</returns>
+            <exception cref="T:System.ArgumentNullException">Один или оба параметра == null</exception>
+        </member>
+        <member name="M:Foundations.BasicComplex.CompareTo(System.Object)">
+            <summary>
+            Сравнивает текущий экземпляр с другим объектом того же типа и возвращает целое число, 
+            которое показывает, расположен ли текущий экземпляр перед, после или на той же позиции 
+            в порядке сортировки, что и другой объект.
+            </summary>
+            <remarks>Доступно для переопределения.</remarks>
+            <param name="obj">Объект для сравнения с данным экземпляром.</param>
+            <returns>Меньше 0. Данный экземпляр предшествует параметру <paramref name="obj"/> в порядке сортировки.</returns>
+            <returns>Равно 0. Данный экземпляр занимает ту же позицию в порядке сортировки, что и <paramref name="obj"/>.</returns>
+            <returns>Меньше 0. Данный экземпляр следует за параметром <paramref name="obj"/> в порядке сортировки.</returns>
+            <exception cref="T:System.ArgumentException">Параметр <paramref name="obj"/> несовместим с данным типом.</exception>
+        </member>
+        <member name="M:Foundations.BasicComplex.CompareTo(Foundations.BasicComplex)">
+            <summary>Сравнивает данный экземпляр <see cref="T:Foundations.BasicComplex"/> с другим для определения порядка сортировки.</summary>
+            <remarks>Доступно для переопределения.</remarks>
+            <param name="other">Экземпляр для сравнения.</param>
+            <returns>Меньше 0. Данный экземпляр предшествует параметру <paramref name="other"/> в порядке сортировки.</returns>
+            <returns>Равно 0. Данный экземпляр занимает ту же позицию в порядке сортировки, что и <paramref name="other"/>.</returns>
+            <returns>Меньше 0. Данный экземпляр следует за параметром <paramref name="other"/> в порядке сортировки.</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.op_Equality(Foundations.BasicComplex,Foundations.BasicComplex)">
+            <summary>Возвращает результат проверки двух экземпляров <see cref="T:Foundations.BasicComplex"/> на равенство по значениям.</summary>
+            <remarks>Проверяет равенство по значениям членов экземпляра.</remarks>
+            <param name="left">Левый операнд.</param>
+            <param name="right">Правый операнд.</param>
+            <returns>True, если операнды равны.</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.op_Inequality(Foundations.BasicComplex,Foundations.BasicComplex)">
+            <summary>Возвращает результат проверки на неравенство по значениям двух экземпляров <see cref="T:Foundations.BasicComplex"/>.</summary>
+            <remarks>Проверяет неравенство по значениям членов экземпляра.</remarks>
+            <param name="left">Левый операнд</param>
+            <param name="right">Правый операнд</param>
+            <returns>True, если операнды неравны.</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.GetHashCode">
+            <summary>Возвращает хэш-код текущего экземпляра <see cref="T:Foundations.BasicComplex"/></summary>
+            <returns>Значение хэш-кода</returns>
+        </member>
+        <member name="M:Foundations.BasicComplex.GetHashCode(Foundations.BasicComplex)">
+            <summary>Возвращает хэш-код указанного экземпляра <see cref="T:Foundations.BasicComplex"/>.</summary>
+            <remarks>Доступно для переопределения.</remarks>
+            <param name="obj"> Объект, для которого необходимо вернуть хэш-код</param>
+            <returns>Хэш-код указанного объекта.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="obj"/> == null</exception>
+        </member>
+        <member name="T:Foundations.Geometry.CoatingPlace">
+            <summary>Место нанесения покрытия</summary>
+        </member>
+        <member name="M:Foundations.Geometry.CoatingPlace.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр класса <see cref="T:Foundations.Geometry.CoatingPlace"/></summary>
+            <param name="title">Имя</param>
+        </member>
+        <member name="T:Foundations.Geometry.Coordinates">
+            <summary>Координаты</summary>
+        </member>
+        <member name="M:Foundations.Geometry.Coordinates.#ctor">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Geometry.Coordinates"/></summary>
+        </member>
+        <member name="M:Foundations.Geometry.Coordinates.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Geometry.Coordinates"/></summary>
+            <param name="title">Ниименование</param>
+        </member>
+        <member name="T:Foundations.Geometry.GeometricPoint">
+            <summary>Геометрическая точка. Определяется только своими координатами.</summary>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.#ctor">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Geometry.GeometricPoint"/>.</summary>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.#ctor(Foundations.Geometry.Coordinates)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Geometry.GeometricPoint"/> с заданными координатами.</summary>
+            <param name="coordinates"></param>
+        </member>
+        <member name="P:Foundations.Geometry.GeometricPoint.Coordinates">
+            <summary>Координаты точки, указывающие её положение в пространстве.</summary>
+            <remarks>Необязательно трехмерные.</remarks>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.CompareTo(Foundations.Geometry.GeometricPoint)">
+            <summary>Сравнивает данный экземпляр <see cref="T:Foundations.Geometry.GeometricPoint"/> с другим для определения порядка сортировки.</summary>
+            <remarks>Доступно для переопределения.</remarks>
+            <param name="other">Экземпляр для сравнения.</param>
+            <returns>Меньше 0. Данный экземпляр предшествует параметру <paramref name="other"/> в порядке сортировки.</returns>
+            <returns>Равно 0. Данный экземпляр занимает ту же позицию в порядке сортировки, что и <paramref name="other"/>.</returns>
+            <returns>Меньше 0. Данный экземпляр следует за параметром <paramref name="other"/> в порядке сортировки.</returns>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.Equals(System.Object)">
+            <summary>Возвращает результат проверки эквивалентности текущего экземпляра <see cref="T:Foundations.Geometry.GeometricPoint"/> с другим объектом.</summary>
+            <param name="obj"><see cref="T:System.Object"/> для сравнения</param>
+            <returns>True, если результат положителен.</returns>
+            <returns>False, если результат отрицателен.</returns>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.Equals(Foundations.Geometry.GeometricPoint)">
+            <summary>Возвращает результат проверки эквивалентности текущего экземпляра <see cref="T:Foundations.Geometry.GeometricPoint"/> с другим экземпляром</summary>
+            <param name="other">Экземпляр для сравнения</param>
+            <returns>True, если результат положителен.</returns>
+            <returns>False, если результат отрицателен.</returns>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.Equals(Foundations.Geometry.GeometricPoint,Foundations.Geometry.GeometricPoint)">
+            <summary>Определяет, эквивалентны ли два указанных экземпляра <see cref="T:Foundations.Geometry.GeometricPoint"/>.</summary>
+            <param name="x">Первый сравниваемый объект</param>
+            <param name="y">Второй сравниваемый объект</param>
+            <returns>True, если указанные объекты равны</returns>
+            <returns>False, если указанные объекты неравны</returns>
+            <exception cref="T:System.ArgumentNullException">Один или оба параметра == null</exception>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.GetHashCode">
+            <summary>Возвращает хэш-код текущего экземпляра <see cref="T:Foundations.Geometry.GeometricPoint"/></summary>
+            <returns>Значение хэш-кода</returns>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.GetHashCode(Foundations.Geometry.GeometricPoint)">
+            <summary>Возвращает хэш-код указанного экземпляра <see cref="T:Foundations.Geometry.GeometricPoint"/>.</summary>
+            <remarks>Доступно для переопределения.</remarks>
+            <param name="obj"> Объект, для которого необходимо вернуть хэш-код</param>
+            <returns>Хэш-код указанного объекта.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="obj"/> == null</exception>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.op_Equality(Foundations.Geometry.GeometricPoint,Foundations.Geometry.GeometricPoint)">
+            <summary>Возвращает результат проверки двух экземпляров <see cref="T:Foundations.Geometry.GeometricPoint"/> на равенство по значениям.</summary>
+            <remarks>Проверяет равенство по значениям членов экземпляра.</remarks>
+            <param name="left">Левый операнд.</param>
+            <param name="right">Правый операнд.</param>
+            <returns>True, если операнды равны.</returns>
+        </member>
+        <member name="M:Foundations.Geometry.GeometricPoint.op_Inequality(Foundations.Geometry.GeometricPoint,Foundations.Geometry.GeometricPoint)">
+            <summary>Возвращает результат проверки на неравенство по значениям двух экземпляров <see cref="T:Foundations.Geometry.GeometricPoint"/>.</summary>
+            <remarks>Проверяет неравенство по значениям членов экземпляра.</remarks>
+            <param name="left">Левый операнд</param>
+            <param name="right">Правый операнд</param>
+            <returns>True, если операнды неравны.</returns>
+        </member>
+        <member name="T:Foundations.Geometry.GeometryExtensions">
+            <summary>Класс геометрических расширений.</summary>
+        </member>
+        <member name="P:Foundations.Geometry.GeometryExtensions._coordinates">
+            <summary>Возвращает или устанавливает набор координат.</summary>
+        </member>
+        <member name="M:Foundations.Geometry.GeometryExtensions.GetCoordinates(Foundations.Physics.IMaterialPoint)">
+            <summary>Возвращает координаты для <see cref="T:Foundations.Physics.IMaterialPoint"/></summary>
+            <param name="point">Экземпляр расширяемого интерфейса.</param>
+            <returns>Координаты.</returns>
+        </member>
+        <member name="M:Foundations.Geometry.GeometryExtensions.SetCoordinates(Foundations.Physics.IMaterialPoint,Foundations.Geometry.Coordinates)">
+            <summary>Устанавливает координаты для <see cref="T:Foundations.Physics.IMaterialPoint"/></summary>
+            <param name="point">Экземпляр расширяемого интерфейса.</param>
+            <param name="coordinates">Задаваемые координаты.</param>
+            <returns>Заданные координаты.</returns>
+        </member>
+        <member name="T:Foundations.Geometry.ICrystallCell">
+            <summary>Кристаллическая решётка.</summary>
+        </member>
+        <member name="T:Foundations.Geometry.IDimensions">
+            <summary>Размеры</summary>
+        </member>
+        <member name="P:Foundations.Geometry.IDimensions.Dimensions">
+            <summary>Размеры по осям</summary>
+        </member>
+        <member name="P:Foundations.Geometry.IDimensions.Hight">
+            <summary>Высота</summary>
+        </member>
+        <member name="P:Foundations.Geometry.IDimensions.Length">
+            <summary>Длина</summary>
+        </member>
+        <member name="P:Foundations.Geometry.IDimensions.Width">
+            <summary>Ширина</summary>
+        </member>
+        <member name="T:Foundations.Geometry.IGeometricPoint">
+            <summary>Геометрическая точка. Определяется только своими координатами.</summary>
+        </member>
+        <member name="P:Foundations.Geometry.IGeometricPoint.Coordinates">
+            <summary>Координаты точки, указывающие её положение в пространстве.</summary>
+        </member>
+        <member name="T:Foundations.Geometry.Shape">
+            <summary>Форма предмета</summary>
+        </member>
+        <member name="M:Foundations.Geometry.Shape.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Geometry.Shape"/>.</summary>
+            <param name="title">Имя</param>
+        </member>
+        <member name="T:Foundations.IBasicComplex">
+            <summary>
+            Базовый набор данных для всех реализующих классов.
+            <para/>
+            <list type="number">
+            <listheader>
+            <term>Состоит из следующих данных:</term>
+            </listheader>
+            <para/>
+            <item>
+            <term><see cref="P:Foundations.IBasicComplex.Title"/></term>
+            <description> — Название</description>
+            </item>
+            <para/>
+            <item>
+            <term><see cref="P:Foundations.IBasicComplex.Description"/></term>
+            <description> — Описание</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="P:Foundations.IBasicComplex.Title">
+            <summary>Наименование.</summary>        
+        </member>
+        <member name="P:Foundations.IBasicComplex.Description">
+            <summary>Описание.</summary>
+        </member>
+        <member name="P:Foundations.IBasicComplex.StringComparison">
+            <summary>Правило проверки строк на <see cref="M:System.String.Equals(System.String,System.StringComparison)"/>.</summary>
+        </member>
+        <member name="T:Foundations.InDevelopmentAttribute">
+            <summary>Атрибут элемента, находящегося в разработке.</summary>
+        </member>
+        <member name="T:Foundations.Metrology.MetricUnit">
+            <summary>Единица измерения.</summary>
+        </member>
+        <member name="M:Foundations.Metrology.MetricUnit.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Metrology.MetricUnit"/></summary>
+            <param name="title">Имя.</param>
+        </member>
+        <member name="P:Foundations.Metrology.MetricUnit.ShortTitle">
+            <summary>Сокращённое название.</summary>
+        </member>
+        <member name="T:Foundations.Physics.ElementaryParticles.ColorCharge">
+            <summary>Цветовой заряд элементарной частицы.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.ColorCharge.Red">
+            <summary>Красный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.ColorCharge.AntiRed">
+            <summary>Антикрасный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.ColorCharge.Green">
+            <summary>Зелёный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.ColorCharge.Antigreen">
+            <summary>Антизелёный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.ColorCharge.Blue">
+            <summary>Синий.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.ColorCharge.Antiblue">
+            <summary>Антисиний.</summary>
+        </member>
+        <member name="T:Foundations.Physics.ElementaryParticles.Flavour">
+            <summary>Аромат кварка.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.Flavour.u_quark">
+            <summary>Верхний.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.Flavour.d_quark">
+            <summary>Нижний.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.Flavour.s_quark">
+            <summary>Странный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.Flavour.c_quark">
+            <summary>Очарованный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.Flavour.b_quark">
+            <summary>Прелестный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.ElementaryParticles.Flavour.t_quark">
+            <summary>Истинный.</summary>
+        </member>
+        <member name="T:Foundations.Physics.ElementaryParticles.IAdron">
+            <summary>Адрон.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IAdron.IsotopicSpin">
+            <summary>Изотопический спин.</summary>
+        </member>
+        <member name="T:Foundations.Physics.ElementaryParticles.IElementaryParticle">
+            <summary>Элементарная частица.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.LiveTime">
+            <summary>
+            Время жизни, секунд.
+            </summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.RestMass">
+            <summary>Масса покоя.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.Spin">
+            <summary>Спин.</summary>
+            <remarks>Положительное целое или получелое число.</remarks>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.ElectricCharge">
+            <summary>Электрический заряд, кулон (Кл).</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.MagneticMoment">
+            <summary>Магнитный момент.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.BaryonCharge">
+            <summary>Барионный заряд.</summary>
+            <remarks>Вычисляеемое квантовое число.</remarks>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.LeptonNumeric">
+            <summary>Лептонное число.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IElementaryParticle.Oddity">
+            <summary>Странность.</summary>
+        </member>
+        <member name="T:Foundations.Physics.ElementaryParticles.IFermion">
+            <summary>Фермион.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IFermion.QuantumState">
+            <summary>Квантовое состояние.</summary>
+        </member>
+        <member name="T:Foundations.Physics.ElementaryParticles.IQuark">
+            <summary>Кварк.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IQuark.Generation">
+            <summary>Поколение.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IQuark.Flavour">
+            <summary>Аромат.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IQuark.ColorCharge">
+            <summary>Цветовой заряд.</summary>
+        </member>
+        <member name="P:Foundations.Physics.ElementaryParticles.IQuark.ElectricChargeFractional">
+            <summary>Дробный электрический заряд (в электронах).</summary>
+            <remarks>Для кварка кратен 1/3 заряда электрона.</remarks>
+        </member>
+        <member name="T:Foundations.Physics.IPhysicalBody">
+            <summary>Физическое тело</summary>
+        </member>
+        <member name="P:Foundations.Physics.IPhysicalBody.BodyMaterial">
+            <summary>Материал</summary>
+        </member>
+        <member name="P:Foundations.Physics.IPhysicalBody.Shape">
+            <summary>Форма</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.ConnectionType">
+            <summary>Тип связи между элементами вещества.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.ConnectionType.IonicConnection">
+            <summary>Ионная связь.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.ConnectionType.CovalentConnection">
+            <summary>Ковалентная связь.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.ConnectionType.MetalConnection">
+            <summary>Металлическая связь.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.ConnectionType.MolecularConnection">
+            <summary>Молекулярная связь.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.ConnectionType.HydrogenConnection">
+            <summary>Водородная связь.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IAggregateCondition">
+            <summary>Агрегатное состояние.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IAggregateCondition.Viscosity">
+            <summary>Вязкость.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.ICrystalStructure">
+            <summary>Кристаллическая структура.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ICrystalStructure.CrystallCell">
+            <summary>Кристаллическая решётка.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ICrystalStructure.MotiveUnit">
+            <summary>Мотивная единица.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IGaseousCondition">
+            <summary>Газообразное состояние.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IHardness">
+            <summary>Твёрдость.</summary>
+            <remarks><see href="https://ru.wikipedia.org/wiki/Твёрдость"/></remarks>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IHardness.Methods">
+            <summary>Методы измерения и величины.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IHardness.MohsScaleMax">
+            <summary>Максимальная твёрдость по шкале Мооса.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IHardness.MohsScaleMin">
+            <summary>Минимальная твёрдость по шкале Мооса.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.ILiquidCondition">
+            <summary>Агрегатное состояние — жидкость.</summary>
+            <remarks><see href="https://ru.wikipedia.org/wiki/Жидкость"/></remarks>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ILiquidCondition.StructureType">
+            <summary>Тип структуры расположения элементов.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IMaterial">
+            <summary>Материал.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IMaterial.Color">
+            <summary>Цвет материала.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IMaterial.Density">
+            <summary>Плотность материала при стандартных условиях.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IMaterial.PhysicalProperties">
+            <summary>Свойства, в зависимости от условий.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IMatter">
+            <summary>Материя.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IMineral">
+            <summary>Минерал.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.IMineralSpecies">
+            <summary>Минеральный вид.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.IMineralSpecies.Structure">
+            <summary>Кристаллическая структура.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.ISolidCondition">
+            <summary>Агрегатное состояние — твёрдое тело.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISolidCondition.Hardness">
+            <summary>Твёрдость.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISolidCondition.RelativeElongation">
+            <summary>Относительное удлинение.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISolidCondition.RelativeNarrowing">
+            <summary>Относительное сужение.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISolidCondition.ElasticModulus">
+            <summary>Модуль упругости, паскаль (Pa).</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISolidCondition.ElasticLimit">
+            <summary>Предел упругости, паскаль (Pa).</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISolidCondition.DurabilityLimit">
+            <summary>Предел прочности, паскаль (Pa).</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.ISubstance">
+            <summary>Вещество.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISubstance.Elements">
+            <summary>Массовые доли элементарных частиц.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISubstance.ChemicalComposition">
+            <summary>Химический состав. Массовые доли составляющих веществ.</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.ISubstance.ConnectionType">
+            <summary>Тип связи между элементами вещества.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.Material">
+            <summary>Материал</summary>
+        </member>
+        <member name="M:Foundations.Physics.Matter.Material.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.Matter.Material"/></summary>
+            <param name="title">Имя</param>
+        </member>
+        <member name="P:Foundations.Physics.Matter.Material.Density">
+            <summary>Плотность</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.Material.Color">
+            <summary>Цвет материала</summary>
+        </member>
+        <member name="P:Foundations.Physics.Matter.Material.Substances">
+            <summary>Массовые доли составляющих веществ.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.MohsScale">
+            <summary>Твёрдость по шкале Мооса.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Uncnown">
+            <summary>Неизвестно.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Talc">
+            <summary>Тальк.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Gypsum">
+            <summary>Гипс.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Calcite">
+            <summary>Кальцит.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Fluorite">
+            <summary>Флюорит.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Apatite">
+            <summary>Апатит.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Orthoclase">
+            <summary>Ортоклаз.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Quartz">
+            <summary>Кварц.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Topaz">
+            <summary>Топаз.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Corundum">
+            <summary>Корунд.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.MohsScale.Diamond">
+            <summary>Алмаз.</summary>
+        </member>
+        <member name="T:Foundations.Physics.Matter.StructureType">
+            <summary>Тип структуры для расположения элементов вещества.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.StructureType.Uncnoun">
+            <summary>Неизвестно.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.StructureType.Crystalline">
+            <summary>Кристаллический.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.StructureType.Amorphous">
+            <summary>Аморфный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.StructureType.Metamict">
+            <summary>Метамиктный.</summary>
+        </member>
+        <member name="F:Foundations.Physics.Matter.StructureType.Mixed">
+            <summary>Смешанный.</summary>
+        </member>
+        <member name="T:Foundations.Physics.IMaterialPoint">
+            <summary>Материальная точка.</summary>
+        </member>
+        <member name="P:Foundations.Physics.IMaterialPoint.Mass">
+            <summary>Масса.</summary>
+        </member>
+        <member name="T:Foundations.Physics.MaterialPoint">
+            <summary>Материальная точка.</summary>
+        </member>
+        <member name="P:Foundations.Physics.MaterialPoint.Mass">
+            <summary>Масса</summary>
+        </member>
+        <member name="M:Foundations.Physics.MaterialPoint.#ctor">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.MaterialPoint"/>.</summary>
+        </member>
+        <member name="M:Foundations.Physics.MaterialPoint.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.MaterialPoint"/>.</summary>
+            <param name="title">Название</param>
+        </member>
+        <member name="M:Foundations.Physics.MaterialPoint.#ctor(System.Double)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.MaterialPoint"/>.</summary>
+            <param name="mass">Масса</param>
+        </member>
+        <member name="M:Foundations.Physics.MaterialPoint.#ctor(System.String,System.Int32)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.MaterialPoint"/>.</summary>
+            <param name="title">Название</param>
+            <param name="mass">Масса</param>
+        </member>
+        <member name="T:Foundations.Physics.PhysicalBody">
+            <summary>Физическое тело</summary>
+        </member>
+        <member name="M:Foundations.Physics.PhysicalBody.#ctor">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.PhysicalBody"/>.</summary>
+        </member>
+        <member name="M:Foundations.Physics.PhysicalBody.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.PhysicalBody"/>.</summary>
+            <param name="title">Название</param>
+        </member>
+        <member name="M:Foundations.Physics.PhysicalBody.#ctor(System.Double)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.PhysicalBody"/>.</summary>
+            <param name="mass">Масса</param>
+        </member>
+        <member name="M:Foundations.Physics.PhysicalBody.#ctor(Foundations.Physics.Matter.Material)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.PhysicalBody"/>.</summary>
+            <param name="bodyMaterial">Материал тела</param>
+        </member>
+        <member name="M:Foundations.Physics.PhysicalBody.#ctor(System.String,System.Int32)">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.PhysicalBody"/>.</summary>
+            <param name="title">Название.</param>
+            <param name="mass">Масса.</param>
+        </member>
+        <member name="P:Foundations.Physics.PhysicalBody.BodyMaterial">
+            <summary>Материал тела.</summary>
+        </member>
+        <member name="P:Foundations.Physics.PhysicalBody.Shape">
+            <summary>Форма</summary>
+        </member>
+        <member name="P:Foundations.Physics.PhysicalBody.Length">
+            <summary>Длина</summary>
+        </member>
+        <member name="P:Foundations.Physics.PhysicalBody.Hight">
+            <summary>Высота</summary>
+        </member>
+        <member name="P:Foundations.Physics.PhysicalBody.Width">
+            <summary>Ширина</summary>
+        </member>
+        <member name="P:Foundations.Physics.PhysicalBody.Foundations#Geometry#IDimensions#Dimensions">
+            <summary>Размеры по осям</summary>
+        </member>
+        <member name="T:Foundations.Physics.SolidBody">
+            <summary>Твёрдое тело.</summary>
+        </member>
+        <member name="M:Foundations.Physics.SolidBody.#ctor">
+            <summary>Создаёт новый экземпляр <see cref="T:Foundations.Physics.SolidBody"/>.</summary>
+        </member>
+        <member name="M:Foundations.Physics.SolidBody.#ctor(System.String)">
+            <summary>Создаёт новый экземпляр класса <see cref="T:Foundations.Physics.SolidBody"/>.</summary>
+            <param name="title">Название.</param>
+        </member>
+        <member name="M:Foundations.Physics.SolidBody.#ctor(System.Int32)">
+            <summary>Создаёт новый экземпляр класса <see cref="T:Foundations.Physics.SolidBody"/>.</summary>
+            <param name="weight">Масса.</param>
+        </member>
+        <member name="M:Foundations.Physics.SolidBody.#ctor(System.String,System.Int32)">
+            <summary>Создаёт новый экземпляр класса <see cref="T:Foundations.Physics.SolidBody"/>.</summary>
+            <param name="title">Название.</param>
+            <param name="weght">Масса.</param>
+        </member>
+        <member name="P:Foundations.Physics.SolidBody.FillerMaterial">
+            <summary>Материал наполнителя</summary>
+        </member>
+        <member name="P:Foundations.Physics.SolidBody.CoatingMaterial">
+            <summary>Материал покрытия.</summary>
+        </member>
+        <member name="P:Foundations.Physics.SolidBody.CoatingPlace">
+            <summary>Место покрытия</summary>
+        </member>
+        <member name="T:Foundations.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.ArgumentExceptionMessage">
+            <summary>
+              Ищет локализованную строку, похожую на Недопустимый аргумент в.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.BasicComplexDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Представляет базовый набор данных для всех производных классов..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.BasicComplexName">
+            <summary>
+              Ищет локализованную строку, похожую на Базовый набор данных.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.BasicDataGroup">
+            <summary>
+              Ищет локализованную строку, похожую на Общие данные.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.CloneName">
+            <summary>
+              Ищет локализованную строку, похожую на Возвращает копию экземпляра.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.CompareForSort">
+            <summary>
+              Ищет локализованную строку, похожую на Сравнить для порядка сортировки.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.CompareToObjectDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Сравнивает текущий экземпляр с другим объектом того же типа и возвращает целое число, которое показывает, расположен ли текущий экземпляр перед, после или на той же позиции в порядке сортировки, что и другой объект..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.CompareToOtherDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Сравнивает текущий экземпляр с другим и возвращает целое число, которое показывает, расположен ли текущий экземпляр перед, после или на той же позиции в порядке сортировки, что и другой экземпляр..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.CoordsDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Координаты точки или объекта в пространстве. Пространство необязательно трёхмерно..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.CoordsName">
+            <summary>
+              Ищет локализованную строку, похожую на Координаты.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.DataComparisonGroup">
+            <summary>
+              Ищет локализованную строку, похожую на Сравнение данных.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.DescriptionDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Описание сущности. Короткое и ясное, — о том, что эта сущность из себя представляет..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.DescriptionName">
+            <summary>
+              Ищет локализованную строку, похожую на Описание.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.EqualsObjectDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Возвращает результат проверки эквивалентности текущего экземпляра с другим объектом..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.EqualsObjectName">
+            <summary>
+              Ищет локализованную строку, похожую на Проверить эквивалентность с другим объектом.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.EqualsOtherDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Возвращает результат проверки эквивалентности текущего экземпляра с другим экземпляром. .
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.EqualsOtherName">
+            <summary>
+              Ищет локализованную строку, похожую на Проверить эквивалентность с другим экземпляром.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.EqualsTwoName">
+            <summary>
+              Ищет локализованную строку, похожую на Эквивалентны ли два указанных объекта.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.GeometricPointDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Определяется только своими координатами..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.GeometricPointName">
+            <summary>
+              Ищет локализованную строку, похожую на Геометрическая точка.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.HashCodeCurrent">
+            <summary>
+              Ищет локализованную строку, похожую на Хэш-код текущего экземпляра.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.HashCodeTarget">
+            <summary>
+              Ищет локализованную строку, похожую на Хэш-код указанного объекта.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.InvalidStringDescripttion">
+            <summary>
+              Ищет локализованную строку, похожую на Строка состоит только из разделителей или является пустой..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.InvalidValueInitialise">
+            <summary>
+              Ищет локализованную строку, похожую на Попытка создать величину, не предусмотренную в заданной Системе Единиц..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.MeasuredParameters">
+            <summary>
+              Ищет локализованную строку, похожую на Измеряемые параметры.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.ParityDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Возвращает результат проверки на равенство по значениям..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.ParityName">
+            <summary>
+              Ищет локализованную строку, похожую на Проверить на равенство.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.StringComparisonDefault">
+            <summary>
+              Ищет локализованную строку, похожую на Правило проверки строк на эквивалентность по умолчанию.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.StringComparisonDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Правило проверки строк на эквивалентность с установленным правилом проверки..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.StringComparisonName">
+            <summary>
+              Ищет локализованную строку, похожую на Правило проверки строк на эквивалентность.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.TitleDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Наименование сущности. Достаточно понятное, чтобы отличить её от других. Достаточно короткое, чтобы быть наименованием..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.TitleName">
+            <summary>
+              Ищет локализованную строку, похожую на Наименование.
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.UnParityDesc">
+            <summary>
+              Ищет локализованную строку, похожую на Возвращает результат проверки на неравенство по значениям..
+            </summary>
+        </member>
+        <member name="P:Foundations.Properties.Resources.UnParityName">
+            <summary>
+              Ищет локализованную строку, похожую на Проверить на неравенство.
+            </summary>
+        </member>
+        <member name="T:Foundations.Services`1">
+            <summary>Общие и служебные методы</summary>
+        </member>
+        <member name="M:Foundations.Services`1.IsSameType(System.Object)">
+            <summary>
+            Возвращает результат проверки совпадения типа параметра <paramref name="obj"/> 
+            с <see cref="!:T"/>
+            </summary>
+            <typeparam name="T">Эталонный <see cref="!:T"/> для сравнения</typeparam>
+            <param name="obj">Сравниваемый экземпляр <see cref="T:System.Object"/></param>
+            <returns>TRUE, если типы сопадают.</returns>
+        </member>
+        <member name="M:Foundations.Services`1.IsSameType(`0,System.Object)">
+            <summary>
+            Возвращает результат проверки совпадения типа параметра <paramref name="obj"/> 
+            с экземпляром <see cref="!:T"/>
+            </summary>
+            <typeparam name="T">Эталонный <see cref="!:T"/> для сравнения</typeparam>
+            <param name="current">Экземпляр <see cref="!:T"/></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

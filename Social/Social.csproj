@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Social</RootNamespace>
+    <ApplicationIcon />
+    <Win32Resource />
+    <Company>Shidark Design Construction</Company>
+    <Authors>Константин Бутенин</Authors>
+    <Configurations>Debug;Release;TestConfiguration</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile></DocumentationFile>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TestConfiguration|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;TestComilation</DefineConstants>
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>E:\Development\Projects\HantelShop\HantelClassLibrary\HantelClassLibrary\HantelClassLibrary.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Foundations\Foundations.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Foundations.BasicComplex">
+    <Position X="10" Y="2.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAIAgCEQEgAAgAAAAAAABAIAAAAAAAAAAAiI=</HashCode>
+      <FileName>BasicComplex.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Foundations.Physics.MaterialPoint">
+    <Position X="1.5" Y="9" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Physics\Matter\MaterialPoint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Foundations.Geometry.CoatingPlace">
+    <Position X="13.5" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Geometry\CoatingPlace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foundations.Physics.PhysicalBody">
+    <Position X="0.75" Y="12" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAEBAAAABACQAAAAAAAAAACA=</HashCode>
+      <FileName>Physics\PhysicalBody.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Foundations.Physics.SolidBody">
+    <Position X="1.5" Y="16.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQQAAAAAAAAAA=</HashCode>
+      <FileName>Physics\SolidBody.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foundations.Geometry.GeometricPoint">
+    <Position X="5.75" Y="9" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAgAAAAAAAIAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Geometry\GeometricPoint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Foundations.Geometry.Shape">
+    <Position X="16.25" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Geometry\Shape.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foundations.Physics.Material">
+    <Position X="10.5" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAABA=</HashCode>
+      <FileName>Physics\Matter\Material.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Foundations.Metrology.MetricUnit">
+    <Position X="18.75" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBA=</HashCode>
+      <FileName>MetricUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foundations.Geometry.Coordinates">
+    <Position X="21.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Geometry\Coordinates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Foundations.IBasicComplex">
+    <Position X="8.25" Y="13.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBasicComplex.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Geometry.IGeometricPoint">
+    <Position X="10" Y="15.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry\IGeometricPoint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.IMaterialPoint">
+    <Position X="7.25" Y="15.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Physics\Matter\IMaterialPoint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.IPhysicalBody">
+    <Position X="7" Y="17.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\IPhysicalBody.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Geometry.IDimensions">
+    <Position X="13.5" Y="15.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEJAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Geometry\IDimensions.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

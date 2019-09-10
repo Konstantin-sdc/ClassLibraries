@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Interface Name="Foundations.Physics.Matter.IMatter">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IMatter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.ISubstance">
+    <Position X="0.5" Y="4.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAwAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\ISubstance.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IField">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IField.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.ElementaryParticles.IElementaryParticle">
+    <Position X="9.25" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAIABAAAAAAAAAgAAABAAAAAAIAAAAAAgAAAIAAAA=</HashCode>
+      <FileName>Physics\ElementaryParticles\IElementaryParticle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.ElementaryParticles.IAdron">
+    <Position X="8" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\ElementaryParticles\IAdron.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.ElementaryParticles.IFermion">
+    <Position X="11" Y="6" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\ElementaryParticles\IFermion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IMineral">
+    <Position X="2" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IMineral.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IMaterial">
+    <Position X="1.5" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IMaterial.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.IBasicComplex">
+    <Position X="5.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBasicComplex.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IMineralSpecies">
+    <Position X="1.25" Y="9" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IMineralSpecies.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IAggregateCondition">
+    <Position X="7.75" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IAggregateCondition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.ILiquidCondition">
+    <Position X="6" Y="10.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\ILiquidCondition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IGaseousCondition">
+    <Position X="9.75" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\IGaseousCondition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.ISolidCondition">
+    <Position X="6.25" Y="12.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAgAAAAAAAgAAAgAAAEAgAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\ISolidCondition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.ICrystalStructure" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\ICrystalStructure.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.Matter.IHardness" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAAEA=</HashCode>
+      <FileName>Physics\Matter\IHardness.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Foundations.Physics.IMaterialPoint" Collapsed="true">
+    <Position X="14.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Physics\Matter\IMaterialPoint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Foundations.Physics.Matter.ConnectionType" Collapsed="true">
+    <Position X="14.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABIAAAAAAABAAAgAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics\Matter\ConnectionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Foundations.Physics.Matter.MohsScale" Collapsed="true">
+    <Position X="16.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIFAAAgAAQAAQAIAAAAAAgAAQAAEAAAAABA=</HashCode>
+      <FileName>Physics\Matter\MohsScale.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Foundations.Physics.Matter.StructureType" Collapsed="true">
+    <Position X="14.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAQACAAAAAAAAAAAACAAAAAAAAABA=</HashCode>
+      <FileName>Physics\Matter\StructureType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
